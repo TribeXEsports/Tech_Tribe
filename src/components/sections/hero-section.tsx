@@ -27,11 +27,7 @@ export default function HeroSection() {
               sequence={[
                 'a Tech Community.',
                 1500,
-                'Visionary Builders.',
-                1500,
-                'Creative Innovators.',
-                1500,
-                'a Freelancing Agency.',
+                'a Freelance Agency.',
                 1500,
                 'turning ideas into reality.',
                 1500,
