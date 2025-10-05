@@ -1,0 +1,130 @@
+{
+  "placeholderImages": [
+    {
+      "id": "portfolio1",
+      "description": "Abstract data visualization on a dark background.",
+      "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwwfHx8fDE3NTk2NTM0Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data visualization"
+    },
+    {
+      "id": "portfolio2",
+      "description": "Mobile app interface for a social network.",
+      "imageUrl": "https://images.unsplash.com/photo-1678522345215-8b483547d0a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2JpbGUlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzU5NjUyMTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile interface"
+    },
+    {
+      "id": "portfolio3",
+      "description": "AI analytics dashboard with charts and graphs.",
+      "imageUrl": "https://images.unsplash.com/photo-1649881927251-46644283751a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGFzaGJvYXJkJTIwY2hhcnRzfGVufDB8fHx8MTc1OTY3NjA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard charts"
+    },
+    {
+      "id": "portfolio4",
+      "description": "Modern e-commerce website product page.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDB8fHx8MTc1OTYyMDQ1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ecommerce website"
+    },
+    {
+      "id": "portfolio5",
+      "description": "Gameplay screenshot of a mobile game.",
+      "imageUrl": "https://images.unsplash.com/photo-1623743993875-03d6a5c7c709?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBnYW1lfGVufDB8fHx8MTc1OTU5Mjc3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile game"
+    },
+    {
+      "id": "portfolio6",
+      "description": "Code snippet representing a complex API.",
+      "imageUrl": "https://images.unsplash.com/photo-1720980741441-b00ae54be18a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb2RlJTIwQVBJfGVufDB8fHx8MTc1OTY3NjA0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code API"
+    },
+    {
+      "id": "gallery1",
+      "description": "Team collaborating in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1492366254240-43affaefc3e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NTk1NTgwNjh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "gallery2",
+      "description": "Close-up of a developer writing code.",
+      "imageUrl": "https://images.unsplash.com/photo-1667984436031-ea1d9ff307ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZXZlbG9wZXIlMjBjb2Rpbmd8ZW58MHx8fHwxNzU5NTkyMDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "developer coding"
+    },
+    {
+      "id": "gallery3",
+      "description": "A company workshop or presentation.",
+      "imageUrl": "https://images.unsplash.com/photo-1521248455645-c8f3958ff769?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb21wYW55JTIwd29ya3Nob3B8ZW58MHx8fHwxNzU5Njc2MDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "company workshop"
+    },
+    {
+      "id": "gallery4",
+      "description": "Brainstorming session with sticky notes on a whiteboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1633431303377-9f8d58cdb4f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmFpbnN0b3JtaW5nJTIwc2Vzc2lvbnxlbnwwfHx8fDE3NTk2NzYwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brainstorming session"
+    },
+    {
+      "id": "gallery5",
+      "description": "Celebrating a project launch in the office.",
+      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvZmZpY2UlMjBjZWxlYnJhdGlvbnxlbnwwfHx8fDE3NTk2NzYwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office celebration"
+    },
+    {
+      "id": "gallery6",
+      "description": "A modern, well-lit office space.",
+      "imageUrl": "https://images.unsplash.com/photo-1646153114001-495dfb56506d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzU5NTY4NjA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern office"
+    },
+    {
+      "id": "gallery7",
+      "description": "Team members having a casual discussion.",
+      "imageUrl": "https://images.unsplash.com/photo-1716703435453-a7733d600d68?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWFtJTIwZGlzY3Vzc2lvbnxlbnwwfHx8fDE3NTk2MjEzMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team discussion"
+    },
+    {
+      "id": "gallery8",
+      "description": "An employee focused on their work at a desk.",
+      "imageUrl": "https://images.unsplash.com/photo-1715858535129-67eeefa1c876?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb2N1c2VkJTIwd29ya3xlbnwwfHx8fDE3NTk2NTgwMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "focused work"
+    },
+    {
+      "id": "testimonial1",
+      "description": "Portrait of a smiling professional woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NTk2NTIyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "testimonial2",
+      "description": "Portrait of a smiling professional man.",
+      "imageUrl": "https://images.unsplash.com/photo-1568316674077-d72ee56de61c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzU5NjI2OTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "testimonial3",
+      "description": "Headshot of a creative professional woman.",
+      "imageUrl": "https://images.unsplash.com/photo-1617158035504-03d65e952986?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjcmVhdGl2ZSUyMHdvbWFufGVufDB8fHx8MTc1OTY3NjA0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "creative woman"
+    },
+    {
+      "id": "testimonial4",
+      "description": "Headshot of a tech professional man.",
+      "imageUrl": "https://images.unsplash.com/photo-1614086138082-8f9f4bed81e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVjaCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NTk2NzYwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech professional"
+    },
+    {
+      "id": "event1",
+      "description": "Abstract network of nodes representing AI.",
+      "imageUrl": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG5ldHdvcmt8ZW58MHx8fHwxNzU5NjY5MzIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract network"
+    },
+    {
+      "id": "event2",
+      "description": "Digital blockchain graphic.",
+      "imageUrl": "https://images.unsplash.com/photo-1639200413098-017ed1f7df45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwYmxvY2tjaGFpbnxlbnwwfHx8fDE3NTk2NzYwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital blockchain"
+    },
+    {
+      "id": "event3",
+      "description": "People networking at a corporate event.",
+      "imageUrl": "https://images.unsplash.com/photo-1558008258-3256797b43f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBldmVudHxlbnwwfHx8fDE3NTk1ODY2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate event"
+    }
+  ]
+}
