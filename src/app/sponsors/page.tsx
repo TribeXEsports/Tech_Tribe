@@ -1,30 +1,15 @@
+"use client";
 
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Chatbot from '@/components/chatbot';
 import { AnimatedSection } from '@/components/animated-section';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Target, Eye, Users, Zap } from 'lucide-react';
 
-const platinumSponsors = [
-  { name: 'QuantumLeap', logoUrl: 'https://picsum.photos/seed/quantum/400/200', hint: 'quantum tech' },
-];
-
-const goldSponsors = [
-  { name: 'Innovate Corp', logoUrl: 'https://picsum.photos/seed/innovate/400/200', hint: 'tech company' },
-  { name: 'Tech Solutions Ltd.', logoUrl: 'https://picsum.photos/seed/techltd/400/200', hint: 'solutions logo' },
-];
-
-const silverSponsors = [
-  { name: 'Future Systems', logoUrl: 'https://picsum.photos/seed/future/400/200', hint: 'systems logo' },
-  { name: 'NextGen AI', logoUrl: 'https://picsum.photos/seed/nextgen/400/200', hint: 'ai company' },
-  { name: 'DataWeavers', logoUrl: 'https://picsum.photos/seed/dataw/400/200', hint: 'data analytics' },
-  { name: 'CloudPioneers', logoUrl: 'https://picsum.photos/seed/cloudp/400/200', hint: 'cloud services' },
-];
-
+// The 'whySponsor' data remains as it explains the benefits to potential sponsors.
 const whySponsor = [
   {
     icon: <Target className="w-8 h-8 text-primary" />,
@@ -46,25 +31,8 @@ const whySponsor = [
     title: 'Drive Innovation',
     description: 'Inspire creative solutions and see innovative applications of your technology by providing challenges and prizes at our events.',
   },
-]
+];
 
-
-const SponsorCard = ({ name, logoUrl, hint }: { name: string; logoUrl: string; hint: string }) => (
-    <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-primary/20 p-4">
-        <CardContent className="p-0 flex flex-col items-center justify-center gap-4 aspect-video">
-        <div className="relative w-full h-20">
-            <Image
-                src={logoUrl}
-                alt={`${name} Logo`}
-                fill
-                className="object-contain"
-                data-ai-hint={hint}
-            />
-        </div>
-        <p className="font-semibold text-center text-sm">{name}</p>
-        </CardContent>
-    </Card>
-);
 
 export default function SponsorsPage() {
   return (
@@ -107,39 +75,20 @@ export default function SponsorsPage() {
             </div>
         </AnimatedSection>
         
-        <AnimatedSection id="our-sponsors" className="py-12 md:py-16">
+        {/* START: Updated "Our Sponsors" section */}
+        <AnimatedSection id="founding-partner" className="py-12 md:py-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-foreground sm:text-4xl font-headline">Our Sponsors</h2>
+                <div className="text-center">
+                    <h2 className="text-3xl font-bold text-foreground sm:text-4xl font-headline">Be Our Founding Partner</h2>
                 </div>
-                <div className="space-y-16">
-                    <div>
-                        <h3 className="text-2xl font-bold text-primary sm:text-3xl font-headline text-center mb-8">Platinum Sponsors</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                        {platinumSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} {...sponsor} />
-                        ))}
-                        </div>
-                    </div>
-                    <div>
-                        <h3 className="text-xl font-bold text-foreground sm:text-2xl font-headline text-center mb-8">Gold Sponsors</h3>
-                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-                        {goldSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} {...sponsor} />
-                        ))}
-                        </div>
-                    </div>
-                    <div>
-                        <h3 className="text-lg font-bold text-muted-foreground sm:text-xl font-headline text-center mb-8">Silver Sponsors</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {silverSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} {...sponsor} />
-                        ))}
-                        </div>
-                    </div>
+                <div className="mt-8 max-w-4xl mx-auto text-center bg-card/50 p-8 rounded-lg border border-dashed border-border/50">
+                    <p className="text-lg text-muted-foreground">
+                        We are actively seeking our inaugural sponsors to build a foundational partnership. This is a unique opportunity to gain prominent visibility and be featured as a key supporter from the very beginning. Your collaboration will be instrumental in launching our community's initiatives.
+                    </p>
                 </div>
             </div>
         </AnimatedSection>
+        {/* END: Updated "Our Sponsors" section */}
 
         <AnimatedSection id="become-a-sponsor" className="py-12 md:py-16">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
