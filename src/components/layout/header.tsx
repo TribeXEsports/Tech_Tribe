@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -57,10 +56,17 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/icon.png" alt="Tech Tribex Logo" width={40} height={40} className="rounded-full" data-ai-hint="logo" />
-            <span className="text-xl font-bold font-headline text-foreground">
-              Tech Tribex
-            </span>
+            {/* START: Added animation wrapper */}
+            <div className="flex items-center gap-2 transform transition-transform duration-300 hover:scale-105">
+              <Image src="/icon.png" alt="Tech Tribex Logo" width={40} height={40} className="rounded-full" data-ai-hint="logo" />
+              <span className={cn(
+                "text-xl font-bold font-headline text-foreground",
+                "transition-colors duration-300 hover:text-red-500" // Red hover effect
+              )}>
+                Tech Tribex
+              </span>
+            </div>
+             {/* END: Added animation wrapper */}
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
