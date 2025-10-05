@@ -13,43 +13,43 @@ import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { motion, useScroll, useSpring } from 'framer-motion';
 
-// --- (Your data arrays: journeyItems) ---
+// START: UPDATED journeyItems array
 const journeyItems = [
     {
         title: 'K.R. Mangalam University (2024)',
-        description: 'Began community and seed-level financial education. Tech team and community building, UI/UX designing, and basic application and system upgrades.'
+        description: 'Founded Tech TribeX, uniting over 1800 students to create the largest tech community on campus, providing resources, guidance, and opportunities.'
     },
     {
-        title: 'Java AI Workshop at KIET Ghaziabad',
-        description: 'Interacting with more than 150+ students in a live session about future technologies and the basics of Java language.'
+        title: 'Gen AI Workshop at IIT Delhi',
+        description: 'In partnership with Edu Tech Life, led a delegation of university students to participate in a Gen AI workshop at IIT Delhi.'
     },
     {
-        title: 'IOT Workshop at KIET Kurukshetra',
-        description: 'An engaging and hands-on session with 100+ students and faculties of the ECE department.'
+        title: 'IoT Workshop at NIT Kurukshetra',
+        description: 'Facilitated student participation in a hands-on IoT workshop at NIT Kurukshetra, broadening their technical horizons.'
     },
     {
-        title: 'Felicitation L/S',
-        description: 'Felicitation by the Optical Society & Photonics Society.'
+        title: 'Roborush 1.0',
+        description: 'Successfully organized and executed the "Roborush 1.0" tech event at K.R. Mangalam University, fostering a spirit of innovation.'
     },
     {
-        title: 'Spiritual Camp at ISKCON Gurugram',
-        description: 'Experienced a spiritual awakening with my team.'
+        title: 'Spiritual Camp at ISKCON Gurgaon',
+        description: 'Organized a spiritual and team-building camp for the community at ISKCON Gurgaon.'
     },
     {
         title: 'Campus Ambassador Roles',
-        description: 'Served as Campus Ambassador for leading brands like Coding Ninjas, Unstop, and GeeksforGeeks, and also led the Google Developer Student Club.'
+        description: 'Served as a Campus Ambassador for Tech Fest IIT Delhi, Autokriti NIT Kurukshetra, and Blockchain Orbit.'
     },
     {
-        title: 'Founded TribexU Esports',
-        description: 'Founded and led a team that won over 20+ official tournaments and are now recognized on global platforms, putting India on the esports map.'
+        title: 'Founded TribeX Esports',
+        description: 'Launched a fast-growing esports organization in India, hosting tournaments and managing a team on global platforms.'
     },
     {
-        title: 'ABES Imports Collaboration',
-        description: 'Collaborated with ABES Imports and Mr. Vinay Tyagi.'
+        title: 'BNG Esports Collaboration',
+        description: 'Forged a strategic collaboration between TribeX Esports and BNG Esports to enhance our presence in the gaming community.'
     }
 ];
+// END: UPDATED journeyItems array
 
-// UPDATED: Replaced placeholder data with your local image paths.
 const partnerships = [
     { name: 'Blockchain Orbit', logoUrl: '/partner/comp/blockchain_rbit.jpg', hint: 'Blockchain Orbit logo', type: 'company' },
     { name: 'BNG Esports', logoUrl: '/partner/comp/BNG_Esports.jpg', hint: 'BNG Esports logo', type: 'company' },
@@ -60,7 +60,6 @@ const partnerships = [
     { name: 'K.R. Mangalam University', logoUrl: '/partner/uni/K_R_MANGALAM_UNIVERSITY.png', hint: 'K.R. Mangalam University logo', type: 'university' },
     { name: 'Manav Rachna University', logoUrl: '/partner/uni/MANAV_RACHNA_UNIVERSITY.png', hint: 'Manav Rachna University logo', type: 'university' }
 ];
-
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -165,52 +164,66 @@ function JourneySection() {
 }
 
 
-function PartnerMarquee({ title, partners }: { title: string; partners: (typeof partnerships) }) {
+function PartnerMarquee({ title, partners, loop = true }: { title: string; partners: (typeof partnerships); loop?: boolean }) {
   if (!partners || partners.length === 0) return null;
+
+  const PartnerItem = ({ partner, index }: { partner: typeof partnerships[0]; index: number; }) => (
+    <Dialog key={`${partner.name}-${index}`}>
+      <DialogTrigger asChild>
+        <motion.div
+          className="flex-shrink-0 w-[200px] md:w-[250px] aspect-video flex items-center justify-center cursor-pointer p-4"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <Image
+            src={partner.logoUrl}
+            alt={`${partner.name} logo`}
+            width={200}
+            height={100}
+            className="object-contain"
+            data-ai-hint={partner.hint}
+          />
+        </motion.div>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px] bg-card p-0">
+          <Image
+              src={partner.logoUrl}
+              alt={`${partner.name} logo`}
+              width={425}
+              height={240}
+              className="object-contain rounded-t-lg"
+              data-ai-hint={partner.hint}
+            />
+      </DialogContent>
+    </Dialog>
+  );
 
   return (
     <div className="mt-12 md:mt-16">
        <h3 className="text-2xl font-bold tracking-tight text-center text-foreground sm:text-3xl font-headline">{title}</h3>
-      <div
-        className="mt-8 relative m-auto w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[50px] md:before:w-[100px] before:bg-[linear-gradient(to_right,hsl(var(--card))_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[50px] md:after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,hsl(var(--card))_0%,rgba(255,255,255,0)_100%)] after:content-['']"
-      >
-        <div className="animate-scroll flex gap-8">
-          {[...partners, ...partners].map((partner, index) => (
-             <Dialog key={`${partner.name}-${index}`}>
-              <DialogTrigger asChild>
-                <motion.div
-                  className="flex-shrink-0 w-[200px] md:w-[250px] aspect-video flex items-center justify-center cursor-pointer p-4"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Image
-                    src={partner.logoUrl}
-                    alt={`${partner.name} logo`}
-                    width={200}
-                    height={100}
-                    className="object-contain"
-                    data-ai-hint={partner.hint}
-                  />
-                </motion.div>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px] bg-card p-0">
-                  <Image
-                      src={partner.logoUrl}
-                      alt={`${partner.name} logo`}
-                      width={425}
-                      height={240}
-                      className="object-contain rounded-t-lg"
-                      data-ai-hint={partner.hint}
-                    />
-              </DialogContent>
-            </Dialog>
-          ))}
+
+      {loop ? (
+         // infinitely scrolling marquee
+        <div
+          className="mt-8 relative m-auto w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[50px] md:before:w-[100px] before:bg-[linear-gradient(to_right,hsl(var(--card))_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[50px] md:after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,hsl(var(--card))_0%,rgba(255,255,255,0)_100%)] after:content-['']"
+        >
+          <div className="animate-scroll flex gap-8">
+            {[...partners, ...partners].map((partner, index) => (
+              <PartnerItem partner={partner} index={index} key={index} />
+            ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        // static, non-looping container
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
+           {partners.map((partner, index) => (
+             <PartnerItem partner={partner} index={index} key={index} />
+           ))}
+        </div>
+      )}
     </div>
   );
 }
-
 
 function PartnershipsSection() {
     const companyPartners = partnerships.filter(p => p.type === 'company');
@@ -232,10 +245,8 @@ function PartnershipsSection() {
             Collaboration is at the heart of our growth. We proudly partner with these leading organizations and academic institutions to create meaningful impact.
           </motion.p>
         </div>
-
         <PartnerMarquee title="Company Partners" partners={companyPartners} />
-        <PartnerMarquee title="Academic Collaborations" partners={universityPartners} />
-
+        <PartnerMarquee title="Academic Collaborations" partners={universityPartners} loop={false} />
       </div>
     </motion.section>
   )
@@ -288,7 +299,6 @@ export default function FounderPage() {
                 </motion.p>
             </div>
             <motion.div variants={sectionVariants} className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Vision Cards */}
               <motion.div variants={itemVariants}>
                   <Card className="text-center h-full bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-primary/20">
                       <CardHeader className="items-center">
@@ -318,7 +328,7 @@ export default function FounderPage() {
                <motion.div variants={itemVariants}>
                   <Card className="text-center h-full bg-card/50 border-border/50 hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-primary/20">
                     <CardHeader className="items-center">
-                       <div className="p-4 bg-primary/10 rounded-full inline-flex">
+                       <div className="p-4 bg-primary/10 rounded-null inline-flex">
                         <Users className="w-8 h-8 text-primary"/>
                       </div>
                       <CardTitle>Tribex Experts</CardTitle>
