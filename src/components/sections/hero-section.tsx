@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection } from '../animated-section';
-// 1. Import the new animation library
 import { TypeAnimation } from 'react-type-animation';
+import { cn } from '@/lib/utils';
 
 export default function HeroSection() {
   return (
@@ -19,24 +19,30 @@ export default function HeroSection() {
         </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 2. Added a fixed height to the h1 to prevent layout shift during animation */}
         <h1 className="text-4xl font-extrabold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl font-headline min-h-[100px] md:min-h-[170px] lg:min-h-[110px]">
-          {/* 3. Replaced the old TypingAnimation with the new, continuous one */}
+          {/* START: Final Implementation */}
+          <span className="text-foreground">We are </span>
           <TypeAnimation
+              // The sequence now only contains the part of the sentence to be colored
               sequence={[
-                'We are a Tech Community.',
-                1500, // wait 1.5s
-                'We are Visionary Builders.',
-                1500, // wait 1.5s
-                'We are Creative Innovators.',
-                1500, // wait 1.5s
+                'a Tech Community.',
+                1500,
+                'Visionary Builders.',
+                1500,
+                'Creative Innovators.',
+                1500,
+                'a Freelancing Agency.',
+                1500,
+                'turning ideas into reality.',
+                1500,
               ]}
               wrapper="span"
               cursor={true}
               repeat={Infinity}
               speed={40}
-              className="inline-block"
+              className="inline-block text-red-500"
             />
+          {/* END: Final Implementation */}
         </h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
           We are a collective of developers, designers, and strategists from the Tech Tribex community, dedicated to building exceptional digital solutions and fostering the next generation of tech talent.
