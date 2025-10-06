@@ -45,7 +45,7 @@ export default function HeroSection() {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button size="lg" asChild className="font-bold w-full sm:w-auto">
-            <Link href="/contact?subject=schedule_call">Schedule a Call</Link>
+            <Link href="https://cal.com/tribex-esports-c9nshp">Schedule a Call</Link>
           </Button>
           <Button size="lg" variant="outline" asChild className="font-bold w-full sm:w-auto">
             <Link href="#community-pillars">Join Community</Link>
